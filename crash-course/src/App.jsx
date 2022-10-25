@@ -1,20 +1,25 @@
 import "./App.css";
 import Todo from "./components/Todo";
 import Title from "./components/Title";
-import Modal from "./components/Modal"
+import Modal from "./components/Modal";
 
 function App() {
   return (
-    <div>
+    <>
       <Title></Title>
-      <div className="todo__wrapper">
-
-      <Todo></Todo>
-      <Todo></Todo>
-      <Todo></Todo>
+      <div>
+        <input type="text" onChange={(event) =>{
+          console.log(event.target.value);
+        }}/>
+        <button>Add Todo</button>
       </div>
-      <Modal></Modal>
-    </div>
+      <div className="todo__wrapper">
+        <Todo title="Finish frontend" />
+        <Todo title="Finish interview" />
+        <Todo title="Get a job" />
+      </div>
+      <Modal title="Are you sure?"/>
+    </>
   );
 }
 

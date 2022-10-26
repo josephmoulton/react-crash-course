@@ -7,7 +7,7 @@ function Counter() {
     setArr(prevArr => [...prevArr,"+"])
   }
   function addMinus(){
-    setArr(prevArr => [...prevArr,"-"])
+    setArr([])
 }
   return (
     <div>

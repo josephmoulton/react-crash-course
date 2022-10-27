@@ -4,6 +4,8 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Nav from "./components/Nav";
+import Users from "./pages/Users";
+
 
 
 
@@ -14,8 +16,7 @@ function App() {
       <Nav/>
         <Routes>
           <Route path="/" element= {<Home/>}></Route>
-          <Route path="/About" element= {<About/>}></Route>
-          <Route path="/Contact" element= {<Contact/>}></Route>
+          <Route path="/users/:username" element={<Users></Users>}></Route>
         </Routes>
       </Router>
     </>
